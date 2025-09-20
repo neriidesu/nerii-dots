@@ -1,0 +1,10 @@
+; sup cuh
+
+(defpoll COVER :interval "1s" '~/.config/eww/scripts/cover.sh')
+(defpoll TITLE :interval "1s" '~/.config/eww/scripts/title.sh')
+(defpoll ARTIST :interval "1s" '~/.config/eww/scripts/artist.sh')
+(defpoll ALBUM :interval "1s" '~/.config/eww/scripts/album.sh')
+(defpoll PLAYING :interval "1s" '~/.config/eww/scripts/playpause.sh')
+(defpoll DAY :interval "1s" '~/.config/eww/scripts/day_format.sh')
+(defpoll MONTH :interval "1s" '~/.config/eww/scripts/month_format.sh')
+(defpoll YEAR :interval "1s" '~/.config/eww/scripts/year_format.sh')

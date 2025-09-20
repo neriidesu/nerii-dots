@@ -1,0 +1,65 @@
+(include "eww_vars.yuck")
+
+(defwidget daybox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text DAY)
+  )
+)
+
+(defwidget monthbox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text MONTH)
+  )
+)
+
+(defwidget yearbox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text YEAR)
+  )
+)
+
+(defwidget powermenu []
+  (centerbox :height "100" :width "340" :halign "center" :valign "center" :class "userinfo-parent"
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "systemctl poweroff" :class "poweroff-button"
+        (label :class "icon-label"  :text "󰐥")
+      )
+    )
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "systemctl reboot"  :class "reboot-button"
+        (label :class "icon-label"  :text "󰜉")
+      )
+    )
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "hyprctl dispatch exit" :class "button"
+        (label :class "icon-label"  :text "󰍃")
+      )
+    )
+  )
+)
+
+(defwidget spotify []
+  (box :orientation "v":height "500" :width "340" :halign "center" :valign "center" :class "container" :space-evenly "false"
+    (box :orientation "v":height "400" :width "340" :halign "end":valign "end" :class "spotify-cover-container" :space-evenly "false"
+   (box :class "album_art" :height "300" :width"300":vexpand "false" :hexpand "false" :style "background-image: url('${COVER}'); border: 1px")
+    (label :class "label" :text TITLE :valign "end")
+    (label :class "label" :text ALBUM :valign "end")
+    (label :class "label" :text ARTIST :valign "end")
+  )
+  (box :height "100" :width "340" :halign "end" :valign "end" :class "spotify-controls-container"
+(box :height "100" :width "100" :halign "center" :valign "center" :class "spotify-button-container"
+      (button :onclick "playerctl previous -p spotify" :class "button"
+        (label :class "icon-label" :text "󰒮")
+      )
+    )   (box :height "100" :width "100" :halign "center" :valign "center" :class "spotify-button-container"
+      (button :onclick "playerctl play-pause -p spotify" :class "button"
+        (label :class "icon-label" :text PLAYING)
+      )
+    )  (box :height "100" :width "100" :halign "center" :valign "center" :class "spotify-button-container"
+      (button :onclick "playerctl next -p spotify" :class "button"
+        (label :class "icon-label" :text "󰒭")
+      )
+    )     )
+     
+  )
+)

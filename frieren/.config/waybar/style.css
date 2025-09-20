@@ -1,0 +1,117 @@
+@import "mocha.css";
+
+* {
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 14px;
+    padding: 0px;
+    border-radius: 9px;
+    background: transparent;
+}
+
+window#waybar {
+  border-radius: 8px;
+}
+
+.modules-left,.modules-right,.modules-center {
+  padding: 0px;
+  background: rgba(17, 17, 27, .5);
+    border: 2px solid @green;
+}
+
+.modules-center{
+    padding-left: 8px;
+  padding-right: 8px;
+}
+
+#custom-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#network,
+#clock,
+#custom-spotify,
+#custom-menu,
+#tray,
+#workspaces,
+#pulseaudio,menu {
+    background-image: linear-gradient(to bottom, @surface1 100%);
+
+    margin: 6px;
+    margin-right: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    color: @text;
+    border-style: none;
+
+    transition-duration: 120ms;
+}
+
+#clock {
+    margin-right: 6px;
+}
+
+#pulseaudio:hover {
+    background-image: linear-gradient(to bottom, @green 100%);
+    color: @mantle;
+    transition-duration: 120ms;
+}
+
+#custom-spotify {
+    background: transparent;
+    padding: 0px 10px;
+    margin: 0px 4px;
+    transition-duration: 120ms;
+}
+
+#custom-spotify:hover {
+    background-image: linear-gradient(to bottom, @green 100%);
+    color: @mantle;
+    transition-duration: 120ms;
+}
+
+#custom-menu{
+    font-weight: bold;
+    transition-duration: 120ms;
+    padding: 6px;
+    padding-right: 8px;
+}
+
+#custom-menu:hover{
+  background-image: linear-gradient(to bottom, @green 100%);
+    color: @mantle;
+    transition-duration: 120ms;
+}
+
+menu menuitem:hover {
+  background-image: linear-gradient(to bottom, @green 100%);
+    color: @mantle;
+    transition-duration: 120ms;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: @text;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: @green;
+}
+#workspaces button.focused {
+  color: @green;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: @green;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: @peach;
+}
